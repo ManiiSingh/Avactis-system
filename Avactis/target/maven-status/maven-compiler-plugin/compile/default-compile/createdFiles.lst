@@ -1,0 +1,6 @@
+CommonClasses\DataProviderClass.class
+CommonClasses\Testutil.class
+avactisProjectPageobject\AvaticsMyaccountPageobject.class
+CommonClasses\ExcelApiTest.class
+CommonClasses\ReadExcelDemo.class
+avactisProjectPageobject\avactisRegistrationFormPageObject.class
