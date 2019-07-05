@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import CommonClasses.PropertyFileRead;
 import avactisProjectPageobject.AvaticsMyaccountPageobject;
@@ -21,10 +22,19 @@ public class AvactisSingInTestFlow {
 	AvaticsMyaccountPageobject avaticsmyaccount;
 	SigninPage signin;
 	private  Logger log;	
+	@Parameters({ "emailid" , "pwd" })
 	@Test(testName = "Validate the Scuessfull Login with Valid User",groups="Regression")
-	public void UserLoginWithvalidData() throws IOException {
-		registrationpage.SignIn().SignInFunction(prop.getPropertyvalue("Emailid"), prop.getPropertyvalue("password"));
-		
+	public void UserLoginWithvalidData(String emailid,String pwd) throws IOException {
+		//Using Property file
+		//registrationpage.SignIn().SignInFunction(prop.getPropertyvalue("Emailid"), prop.getPropertyvalue("password"));
+		registrationpage.SignIn().SignInFunction(emailid, pwd);
+	}
+	
+	@Parameters({ "username", "password" })
+	@Test
+	public void testCaseTwo(String username, String password) {
+		System.out.println("Parameter for User Name passed as :- " + username);
+		System.out.println("Parameter for Password passed as :- " + password);
 	}
 	
 	@Test(testName = "Validate the Scuessfull Login with Invalid User",groups="Functional")
