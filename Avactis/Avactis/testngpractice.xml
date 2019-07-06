@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="none" thread-count="5">
+	<test name="Test">
+	<parameter name="browser" value="Firefox"/>
+	<parameter name="username" value="testuser"/>
+	<parameter name="emailid" value="manii.singh4@gmail.com"/>
+	<parameter name="pwd" value="Waheguru@1313"/>
+	<parameter name="password" value="NewPassword"/>
+		<classes>
+			<class name ="AvactisRegistrationPageTestCases.AvactisSingInTestFlow"/>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

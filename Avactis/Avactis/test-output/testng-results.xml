@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="38544" started-at="2019-06-26T15:36:42Z" finished-at="2019-06-26T15:37:21Z">
+    <groups>
+      <group name="Functional">
+        <method signature="AvactisSingInTestFlow.UserLoginWithInvalidData()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="UserLoginWithInvalidData" class="AvactisRegistrationPageTestCases.AvactisSingInTestFlow"/>
+      </group> <!-- Functional -->
+      <group name="Regression">
+        <method signature="AvactisSingInTestFlow.UserLoginWithvalidData(java.lang.String, java.lang.String)[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="UserLoginWithvalidData" class="AvactisRegistrationPageTestCases.AvactisSingInTestFlow"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Test" duration-ms="38544" started-at="2019-06-26T15:36:42Z" finished-at="2019-06-26T15:37:21Z">
+      <class name="AvactisRegistrationPageTestCases.AvactisSingInTestFlow">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="beforeMethod" is-config="true" duration-ms="9563" started-at="2019-06-26T21:06:42Z" finished-at="2019-06-26T21:06:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="UserLoginWithInvalidData()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="UserLoginWithInvalidData" duration-ms="2037" started-at="2019-06-26T21:06:52Z" finished-at="2019-06-26T21:06:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserLoginWithInvalidData -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-26T21:06:54Z" finished-at="2019-06-26T21:06:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="beforeMethod" is-config="true" duration-ms="11162" started-at="2019-06-26T21:06:54Z" finished-at="2019-06-26T21:07:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="UserLoginWithvalidData(java.lang.String, java.lang.String)[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="UserLoginWithvalidData" duration-ms="6201" started-at="2019-06-26T21:07:05Z" finished-at="2019-06-26T21:07:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manii.singh4@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Waheguru@1313]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserLoginWithvalidData -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-06-26T21:07:11Z" finished-at="2019-06-26T21:07:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="beforeMethod" is-config="true" duration-ms="9540" started-at="2019-06-26T21:07:11Z" finished-at="2019-06-26T21:07:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testCaseTwo(java.lang.String, java.lang.String)[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="testCaseTwo" duration-ms="2" started-at="2019-06-26T21:07:21Z" finished-at="2019-06-26T21:07:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[NewPassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseTwo -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:AvactisRegistrationPageTestCases.AvactisSingInTestFlow@675d3402]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-06-26T21:07:21Z" finished-at="2019-06-26T21:07:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- AvactisRegistrationPageTestCases.AvactisSingInTestFlow -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
