@@ -29,7 +29,7 @@ public class AvactisRegistrationFlowTest {
 	String expectedresult = "Account created successfully. You are now registered.";
 	private  Logger log;
 
- @Test(testName = "Verify the scuessfully User Registration Process", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class, groups = "Smoke")
+ //@Test(testName = "Verify the scuessfully User Registration Process", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class, groups = "Smoke")
 	public void avaticsNewUserregistrationflowtest(String email, String password, String retyepassword,
 			String firstname, String lastname, String country, String state, String zip, String city, String add1,
 			String add2, String contact) {
