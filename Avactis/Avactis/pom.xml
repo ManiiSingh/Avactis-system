@@ -85,7 +85,7 @@
 					<version>3.0.0-M3</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>C:\Users\MANJEET\git\Avactis-system\Avactis\testngpractice.xml</suiteXmlFile>
+							<suiteXmlFile>C:\Users\MANJEET\git\Avactis-system\Avactis\Avactis\Avactis\testngpractice.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
