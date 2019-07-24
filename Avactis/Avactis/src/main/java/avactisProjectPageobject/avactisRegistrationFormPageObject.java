@@ -147,12 +147,20 @@ public class avactisRegistrationFormPageObject extends LoadableComponent<avactis
 	
 	
 	
-	public avactisRegistrationFormPageObject() {
-		System.setProperty("webdriver.chrome.driver",
-				"D:\\Selenium\\yahooEmailSend\\src\\test\\resources\\chromedriver.exe");
-		// TODO Auto-generated constructor stub
-		driver = new ChromeDriver();
-		PageFactory.initElements(driver, this);
+	public avactisRegistrationFormPageObject(String browser) {
+		try {
+			if(browser.equalsIgnoreCase("chrome")) {;
+			System.setProperty("webdriver.chrome.driver",
+					"D:\\Selenium\\yahooEmailSend\\src\\test\\resources\\chromedriver.exe");
+			// TODO Auto-generated constructor stub
+			driver = new ChromeDriver();
+			PageFactory.initElements(driver, this);
+			
+		}
+		}catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Unsupported Browser Newe Change");
+		}
 	}
 
 	@Override
