@@ -1,6 +1,9 @@
 package AvactisRegistrationPageTestCases;
 
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
+
 import CommonClasses.DataProviderClass;
 import CommonClasses.ReadExcelDemo;
 import avactisProjectPageobject.AvaticsMyaccountPageobject;
@@ -9,6 +12,8 @@ import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 //import org.testng.annotations.DataProvider;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+
 import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.util.Collection;
@@ -27,9 +32,9 @@ public class AvactisRegistrationFlowTest {
 	AvaticsMyaccountPageobject myaccount;
 	ReadExcelDemo exceldata;
 	String expectedresult = "Account created successfully. You are now registered.";
-	private  Logger log;
+	private Logger log;
 
- //@Test(testName = "Verify the scuessfully User Registration Process", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class, groups = "Smoke")
+	@Test(testName = "Verify the scuessfully User Registration Process", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class, groups = "Smoke")
 	public void avaticsNewUserregistrationflowtest(String email, String password, String retyepassword,
 			String firstname, String lastname, String country, String state, String zip, String city, String add1,
 			String add2, String contact) {
@@ -41,14 +46,13 @@ public class AvactisRegistrationFlowTest {
 			log.info("User Registered Scussfully");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			// e.printStackTrace();
 			log.warning("User Allready Registered");
 		}
-		
 
 	}
 
-	//@Test(testName = "Verify is User Allready Registered or not", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class, groups = "Smoke")
+	@Test(groups = "Functional", testName = "Verify is User Allready Registered or not", dataProvider = "userregistration", dataProviderClass = DataProviderClass.class)
 	public void verifyUserRegistration(String email, String password, String retyepassword, String firstname,
 			String lastname, String country, String state, String zip, String city, String add1, String add2,
 			String contact) {
@@ -58,28 +62,30 @@ public class AvactisRegistrationFlowTest {
 		assertEquals(registrationpage.allreadyRegisteredUser.getText(),
 				"This account name is already taken. Please choose a different account name.",
 				"Test case Executed scuessfully");
-		//log.info("Verify the scuessfully User Registration Process : Test Case Passed");
+		// log.info("Verify the scuessfully User Registration Process : Test Case
+		// Passed");
 	}
-	
-	@Test(testName = "Verify the function of Sing button", groups="Smoke")
+
+	@Test(testName = "Verify the function of Sing button", groups = "Smoke")
 	public void SingInbuttonfunction() {
 		registrationpage.SignIn();
 	}
 
-	@BeforeMethod
-	public void beforeMethod() {
-		registrationpage = new avactisRegistrationFormPageObject();
+	
+	@BeforeMethod @Parameters({ "username", "password" ,"browser"})
+	public void beforeMethod(String username ,String password,String browser) {
+		System.out.println(password);
+		System.out.println(username);
+		registrationpage = new avactisRegistrationFormPageObject(browser);
 		registrationpage.get();
-		 DOMConfigurator.configure("log4j-alternate.xml");
-		 log = Logger.getLogger(AvactisRegistrationFlowTest.class.getName());
-		 log.info("Test Case Started");
-
+		DOMConfigurator.configure("log4j-alternate.xml");
+		log = Logger.getLogger(AvactisRegistrationFlowTest.class.getName());
+		log.info("Test Case Started");
 	}
-
 	@AfterMethod
 	public void afterMethod() {
-		//registrationpage.close();
-		
+		registrationpage.close();
+
 	}
 
 }
